@@ -16,8 +16,8 @@ const fileSchema = new mongoose.Schema({
   fileName: {
     type: String,
     required: [true, 'Stored filename is required'],
-    unique: true,
-    trim: true
+    trim: true,
+    index: true
   },
   
   // File size in bytes
@@ -56,7 +56,6 @@ const fileSchema = new mongoose.Schema({
 
 // Index for faster queries
 fileSchema.index({ uploadDate: -1 });
-fileSchema.index({ fileName: 1 });
 
 // Virtual property to format file size
 fileSchema.virtual('formattedSize').get(function() {
