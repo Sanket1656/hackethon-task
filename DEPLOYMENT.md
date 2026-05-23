@@ -2,6 +2,15 @@
 
 This guide will help you deploy the PDF Upload & Tracking System to Vercel.
 
+## 📁 Project Structure
+
+Your project now has this structure:
+```
+hackethon-task/
+├── client/     # Frontend (React + Vite)
+└── server/     # Backend (Node.js + Express)
+```
+
 ## 📋 Prerequisites
 
 - GitHub account
@@ -64,7 +73,7 @@ This guide will help you deploy the PDF Upload & Tracking System to Vercel.
    - Import your GitHub repository
    - Configure project:
      - **Framework Preset**: Other
-     - **Root Directory**: `server`
+     - **Root Directory**: `server` ⚠️ IMPORTANT
      - **Build Command**: Leave empty
      - **Output Directory**: Leave empty
 
@@ -133,7 +142,7 @@ This guide will help you deploy the PDF Upload & Tracking System to Vercel.
    - Import the same repository
    - Configure project:
      - **Framework Preset**: Vite
-     - **Root Directory**: `.` (root)
+     - **Root Directory**: `client` ⚠️ IMPORTANT
      - **Build Command**: `npm run build`
      - **Output Directory**: `dist`
 

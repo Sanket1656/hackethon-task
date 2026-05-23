@@ -2,6 +2,15 @@
 
 Complete guide for deploying your PDF Upload & Tracking System on Render.
 
+## 📁 Project Structure
+
+Your project now has this structure:
+```
+hackethon-task/
+├── client/     # Frontend (React + Vite)
+└── server/     # Backend (Node.js + Express)
+```
+
 ## 📋 Prerequisites
 
 - GitHub account with your code pushed
@@ -64,7 +73,7 @@ Complete guide for deploying your PDF Upload & Tracking System on Render.
    - **Name:** `pdf-upload-backend` (or your choice)
    - **Region:** Choose closest to you
    - **Branch:** `main`
-   - **Root Directory:** `server`
+   - **Root Directory:** `server` ⚠️ IMPORTANT
    - **Runtime:** `Node`
    - **Build Command:** `npm install`
    - **Start Command:** `npm start`
@@ -110,7 +119,7 @@ curl https://your-backend.onrender.com/api/files
 2. **Configure Static Site**
    - **Name:** `pdf-upload-frontend`
    - **Branch:** `main`
-   - **Root Directory:** `.` (leave empty or use root)
+   - **Root Directory:** `client` ⚠️ IMPORTANT
    - **Build Command:** `npm install && npm run build`
    - **Publish Directory:** `dist`
 

@@ -48,7 +48,28 @@ A full-stack web application built with the MERN stack (MongoDB, Express.js, Rea
 
 ```
 hackethon-task/
-├── server/                      # Backend
+├── client/                      # Frontend (React + Vite)
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── FileList.jsx    # File list component
+│   │   │   ├── Navbar.jsx      # Navigation bar
+│   │   │   ├── ProgressBar.jsx # Upload progress
+│   │   │   └── UploadBox.jsx   # Upload interface
+│   │   ├── services/
+│   │   │   └── api.js          # API service
+│   │   ├── utils/
+│   │   │   └── formatFileSize.js # Utility functions
+│   │   ├── App.jsx             # Main component
+│   │   ├── App.css             # Custom styles
+│   │   ├── index.css           # Global styles
+│   │   └── main.jsx            # Entry point
+│   ├── public/                 # Static assets
+│   ├── package.json            # Frontend dependencies
+│   ├── vite.config.js          # Vite configuration
+│   ├── tailwind.config.js      # Tailwind configuration
+│   └── vercel.json             # Vercel config
+│
+├── server/                      # Backend (Node.js + Express)
 │   ├── config/
 │   │   └── database.js         # MongoDB connection
 │   ├── controllers/
@@ -62,30 +83,16 @@ hackethon-task/
 │   ├── uploads/                # Uploaded files storage
 │   ├── .env                    # Environment variables
 │   ├── .env.example            # Environment template
-│   ├── package.json
-│   └── server.js               # Entry point
+│   ├── package.json            # Backend dependencies
+│   ├── server.js               # Entry point
+│   └── vercel.json             # Vercel config
 │
-├── src/                        # Frontend
-│   ├── components/
-│   │   ├── FileList.jsx        # File list component
-│   │   ├── Navbar.jsx          # Navigation bar
-│   │   ├── ProgressBar.jsx     # Upload progress
-│   │   └── UploadBox.jsx       # Upload interface
-│   ├── services/
-│   │   └── api.js              # API service
-│   ├── utils/
-│   │   └── formatFileSize.js   # Utility functions
-│   ├── App.jsx                 # Main component
-│   ├── App.css                 # Custom styles
-│   ├── index.css               # Global styles
-│   └── main.jsx                # Entry point
-│
-├── public/                     # Static assets
-├── tailwind.config.js          # Tailwind configuration
-├── postcss.config.js           # PostCSS configuration
-├── vite.config.js              # Vite configuration
-└── package.json                # Frontend dependencies
+├── README.md                    # Main documentation
+├── DEPLOYMENT.md                # Deployment guides
+└── [other docs]                 # Additional documentation
 ```
+
+See [`PROJECT_STRUCTURE.md`](PROJECT_STRUCTURE.md) for complete details.
 
 ## 🚀 Installation & Setup
 
@@ -146,9 +153,9 @@ The backend will run on `http://localhost:5000`
 
 ### Step 3: Frontend Setup
 
-1. Open a new terminal and navigate to project root:
+1. Open a new terminal and navigate to client directory:
 ```bash
-cd ..
+cd ../client
 ```
 
 2. Install dependencies:
